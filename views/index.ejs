@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailart Calls</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mailart-content">
+        <h1>Mailart Calls</h1>
+        <ul class="rappers">
+            <% for(let i=0; i < info.length; i++) {%>
+                <li class="rapper">
+                    <span>
+                        <%= info[i].stageName %>
+                    </span>
+                    <span>
+                        <%= info[i].birthName %>
+                    </span>
+                    <span>
+                        <%= info[i].likes %>
+                    </span>
+                    <span class='fa fa-thumbs-up'></span>
+                    <span class='fa fa-trash'></span>
+                </li>
+                <% } %>
+        </ul>
+
+        <h2>Add a new mailart call</h2>
+
+        <!-- <form action="/addRapper" method="POST">
+            <div>
+                <input type="text" placeholder="Project Title" name="stageName">
+            </div>
+            <div>
+                <input type="text" placeholder="Project Description" name="birthName">
+            </div>
+            <div>
+                <input type="submit">
+            </div> -->
+
+        <form action="/addRapper" method="POST">
+            <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                    <input type="text" name="stageName" value="" placeholder="Mailart call title" />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                    <input type="text" name="birthName" value="" placeholder="Your name / Organization name" />
+                </div>
+
+                <div class="col-6 col-12-xsmall">
+                    <input type="email" name="emailName" value="" placeholder="Contact email" />
+                </div>
+                <!-- <div class="col-6 col-12-xsmall">
+                    <input type="text" name="birthName" value="" placeholder="Address to send the art" />
+                </div> -->
+                <!-- Break -->
+                <!-- <div class="col-12">
+                        <select name="demo-category" id="demo-category">
+                            <option value="">- Category -</option>
+                            <option value="1">Manufacturing</option>
+                            <option value="1">Shipping</option>
+                            <option value="1">Administration</option>
+                            <option value="1">Human Resources</option>
+                        </select>
+                    </div> -->
+                <!-- Break -->
+                <!-- <div class="col-4 col-12-small">
+                        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                        <label for="demo-priority-low">Low</label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <input type="radio" id="demo-priority-normal" name="demo-priority">
+                        <label for="demo-priority-normal">Normal</label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <input type="radio" id="demo-priority-high" name="demo-priority">
+                        <label for="demo-priority-high">High</label>
+                    </div> -->
+                <!-- Break -->
+                <!-- <div class="col-6 col-12-small">
+                        <input type="checkbox" id="demo-copy" name="demo-copy">
+                        <label for="demo-copy">Email me a copy</label>
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <input type="checkbox" id="demo-human" name="demo-human" checked>
+                        <label for="demo-human">I am a human</label>
+                    </div> -->
+                <!-- Break -->
+                <div class="col-12">
+                    <textarea name="demo-message" id="demo-message" placeholder="Describe the mailart call"
+                        rows="6"></textarea>
+                </div>
+                <!-- Break -->
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+
+
+
+        </form>
+    </div>
+
+    <script src='main.js'></script>
+</body>
+
+</html>
